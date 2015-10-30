@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('restr');
+var debug = require('debug')('firm');
 var http = require('http');
 
 /**

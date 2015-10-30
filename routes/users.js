@@ -28,14 +28,14 @@ router.post('/create', function(req, res, next) {
       return res.render('users/create', vm);
     }
     req.login(req.body, function(err) {
-      res.redirect('/orders');
+      res.redirect('/cases');
     });
   });
 });
 
 router.post('/login',
   function(req, res, next) {
-    req.session.orderId = 12345;
+    req.session.caseId = 12345;
     if (req.body.rememberMe) {
       req.session.cookie.maxAge = config.cookieMaxAge;
     }
@@ -43,7 +43,7 @@ router.post('/login',
   }, 
   passport.authenticate('local', {
     failureRedirect: '/', 
-    successRedirect: '/orders',
+    successRedirect: '/cases',
     failureFlash: 'Invalid credentials'
   }));
 

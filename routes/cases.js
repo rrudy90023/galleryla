@@ -7,11 +7,11 @@ router.get('/', restrict, function(req, res, next) {
     return res.redirect('/');
   }
   var vm = {
-    title: 'Place an order',
-    orderId: req.session.orderId,
+    title: 'Place a case',
+    caseId: req.session.caseId,
     firstName: req.user ? req.user.firstName : null
   };
-  res.render('orders/index', vm);
+  res.render('cases/index', vm);
 });
 
 module.exports = router;

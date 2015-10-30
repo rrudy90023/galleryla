@@ -1,5 +1,7 @@
 var bcrypt = require('bcrypt');
 var User = require('../models/user').User;
+var Docket = require('../models/docket').Docket;
+
 
 exports.addUser = function(user, next) {
   bcrypt.hash(user.password, 10, function(err, hash) {
@@ -23,6 +25,33 @@ exports.addUser = function(user, next) {
     });
   });
 };
+
+
+
+exports.addDocket = function(docket, next) {
+
+    // if (err) {
+    //   return next(err);
+    // }
+
+    var newDocket = new Docket({
+      galleryName: docket.galleryName,
+      address: docket.address,
+
+    });
+    
+    newDocket.save(function(err) {
+      // if (err) {
+      //   return next(err);
+      // }
+      next(null);
+    });
+
+};
+
+
+
+
 
 exports.findUser = function(email, next) {
   User.findOne({email: email.toLowerCase()}, function(err, user) {
