@@ -5,10 +5,19 @@ var userService = require('../services/user-service');
 var config = require('../config');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  //res.send('respond with a resource');
+    if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
+
 });
 
 router.get('/create', function(req, res, next) {
+
+
+  if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
   var vm = {
     title: 'Create a docket'
   };
