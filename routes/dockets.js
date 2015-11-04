@@ -3,12 +3,29 @@ var router = express.Router();
 var passport = require('passport');
 var userService = require('../services/user-service');
 var config = require('../config');
+var Docket = require('../models/docket').Docket;
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
-    if (!req.isAuthenticated()) {
-    return res.redirect('/');
-  }
+  //   if (!req.isAuthenticated()) {
+  //   return res.redirect('/');
+  // }
+
+  Docket.find({}, function(err, dockets){
+
+    var docketMap = {};
+
+    dockets.forEach(function(docket){
+      docketMap[docket.galleryName] = docket;
+
+
+    });
+
+    res.send(docketMap);
+
+
+  })
+
 
 });
 
