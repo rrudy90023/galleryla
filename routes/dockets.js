@@ -5,29 +5,76 @@ var userService = require('../services/user-service');
 var config = require('../config');
 var Docket = require('../models/docket').Docket;
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+
+router.get('/api', function(req, res, next) {
   //res.send('respond with a resource');
-  //   if (!req.isAuthenticated()) {
-  //   return res.redirect('/');
-  // }
+    if (!req.isAuthenticated()) {
+      return res.redirect('/');
+    }
 
   Docket.find({}, function(err, dockets){
-
     var docketMap = {};
+    //dockets.forEach(function(docket){
+      for(var i = 0; i<dockets.length; i++){ 
+      docketMap[i] = dockets;
 
-    dockets.forEach(function(docket){
-      docketMap[docket.galleryName] = docket;
-
-
-    });
-
-    res.send(docketMap);
+      };
+    //});
+    res.json(dockets);
 
 
   })
 
+});
+
+
+
+
+router.get('/index', function(req, res, next) {
+  //res.send('respond with a resource');
+    if (!req.isAuthenticated()) {
+      return res.redirect('/');
+    }
+
+
+    
+
+      Docket.find({}, function(err, dockets){
+
+        var docketMap = {};
+
+        //dockets.forEach(function(err, docket){
+
+
+            //docketMap[docket.galleryName] = docket;
+
+          // var docgal = null;
+
+          // docgal = docketMap[docket.galleryName];
+
+
+             var model = {
+               title: 'all dockets',
+               galleryName: dockets.galleryName
+
+             };
+
+             console.log(dockets);
+           res.render('dockets/index', model);
+
+        //});
+
+      
+
+    
+
+      });
+
 
 });
+
+
+
 
 router.get('/create', function(req, res, next) {
 
