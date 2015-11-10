@@ -3,9 +3,11 @@
 </div>
 <div class="widget">
 <ul>
+	    {{#each doclist}}
 
-		<li><h3>{{galleryName}}</h3><br/><p>{{address}}</p></li>
+			<li><h3>{{this.galleryName}}</h3><br/><p>{{this.address}}</p></li>
 
+		{{/each}}
 
 </ul>
 

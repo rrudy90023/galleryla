@@ -38,37 +38,35 @@ router.get('/index', function(req, res, next) {
 
 
     
+    Docket.find({}, function(err, dockets){
+      var docketMap = {};
+      //dockets.forEach(function(docket){
+        for(var i = 0; i<dockets.length; i++){ 
+          var doclist = dockets[i];
 
-      Docket.find({}, function(err, dockets){
+            //var dockets = {};
+            // for(var i = 0; i<dockets.length; i++) {
+               
+               var model = {
+                  title: 'List of Dockets',
+                  galleryName: doclist.galleryName,
+                  address: doclist.address
+               };
+               console.log(doclist);
 
-        var docketMap = {};
-
-        //dockets.forEach(function(err, docket){
+            // };
 
 
-            //docketMap[docket.galleryName] = docket;
+        };
+      //});
+      //console.log(dockets);
+      res.render('dockets/index', { doclist: dockets });
 
-          // var docgal = null;
 
-          // docgal = docketMap[docket.galleryName];
+    })
+ 
 
-
-             var model = {
-               title: 'all dockets',
-               galleryName: dockets.galleryName
-
-             };
-
-             console.log(dockets);
-           res.render('dockets/index', model);
-
-        //});
-
-      
-
-    
-
-      });
+      //});
 
 
 });
