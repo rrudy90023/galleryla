@@ -43,7 +43,7 @@ router.post('/login',
   }, 
   passport.authenticate('local', {
     failureRedirect: '/', 
-    successRedirect: '/cases',
+    successRedirect: '/dockets',
     failureFlash: 'Invalid credentials'
   }));
 
