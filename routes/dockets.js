@@ -3,7 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var userService = require('../services/user-service');
 var config = require('../config');
-var restrict = require('../auth/restrict')
+//var restrict = require('../auth/restrict')
 var Docket = require('../models/docket').Docket;
 /* GET users listing. */
 
@@ -31,7 +31,7 @@ router.get('/api', function(req, res, next) {
 
 
 
-router.get('/', restrict, function(req, res, next) {
+router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
     if (!req.isAuthenticated()) {
       return res.redirect('/');

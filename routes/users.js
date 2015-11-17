@@ -28,7 +28,7 @@ router.post('/create', function(req, res, next) {
       return res.render('users/create', vm);
     }
     req.login(req.body, function(err) {
-      res.redirect('/cases');
+      res.redirect('/dockets');
     });
   });
 });
