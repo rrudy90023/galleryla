@@ -37,8 +37,6 @@ router.get('/', function(req, res, next) {
       return res.redirect('/');
     }
 
-
-    
     Docket.find({}, function(err, dockets){
       // var docketMap = {};
       // //dockets.forEach(function(docket){
@@ -46,7 +44,6 @@ router.get('/', function(req, res, next) {
       //     var doclist = dockets[i];
       var model = dockets.map(function (doc){
 
-               
                return {
                   title: 'List of Dockets',
                   galleryName: doc.galleryName,
@@ -54,16 +51,9 @@ router.get('/', function(req, res, next) {
                };
         });
 
-
       res.render('dockets/index', { "doclist": model, "firstName": req.user.firstName });
-
-
     });
- 
-
       //});
-
-
 });
 
 
@@ -101,6 +91,18 @@ router.post('/create', function(req, res, next) {
     //   res.redirect('/dockets');
     // });
   });
+});
+
+
+
+router.get('/:id',function(req, res, next){
+
+  Docket.findById(req.params.id, function(err, docket){
+
+    res.json(docket);
+
+  });
+
 });
 
 
