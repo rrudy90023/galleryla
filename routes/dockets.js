@@ -99,11 +99,54 @@ router.get('/:id',function(req, res, next){
 
   Docket.findById(req.params.id, function(err, docket){
 
-    res.json(docket);
+    var ebin = {
+      title: 'Edit docket',
+      galleryName: docket.galleryName,
+      address: docket.address     
+
+
+    };
+
+    res.render('dockets/edit', ebin);
+    //res.json(docket);
 
   });
 
+
 });
+
+
+
+router.put('/:id',function(req, res, next){
+
+  var name = req.body.galleryName;
+  var address = req.body.address;
+
+  Docket.findById(req.params.id, function(err, docket){
+
+    docket.galleryName = name;
+    docket.address = address;
+
+    docket.save(function(err){
+
+      res.redirect('/dockets');
+    //res.json(docket);
+
+    });
+
+  });
+
+
+});
+
+
+
+
+
+
+
+
+
 
 
 
