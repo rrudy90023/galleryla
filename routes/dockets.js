@@ -117,7 +117,7 @@ router.get('/:id',function(req, res, next){
 
 
 
-router.put('/:id',function(req, res, next){
+router.post('/:id',function(req, res, next){
 
   var name = req.body.galleryName;
   var address = req.body.address;
@@ -142,8 +142,20 @@ router.put('/:id',function(req, res, next){
 
 
 
+router.delete('/:id',function(req, res, next){
 
+  Docket.findById(req.params.id, function(err, docket){
 
+    docket.remove(function(err){
+
+      res.redirect('/dockets');
+    //res.json(docket);
+
+    });
+
+  });
+
+});
 
 
 
