@@ -102,8 +102,8 @@ router.get('/:id',function(req, res, next){
     var ebin = {
       title: 'Edit docket',
       galleryName: docket.galleryName,
-      address: docket.address     
-
+      address: docket.address,     
+      id: docket._id
 
     };
 
@@ -142,9 +142,10 @@ router.post('/:id',function(req, res, next){
 
 
 
-router.delete('/:id',function(req, res, next){
+router.delete('/:id',function(req, res){
 
-  Docket.findById(req.params.id, function(err, docket){
+  Docket.findById(req.params.id)
+    .exec(function(err, docket){
 
     docket.remove(function(err){
 
