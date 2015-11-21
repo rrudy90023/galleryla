@@ -102,8 +102,8 @@ router.get('/:id',function(req, res, next){
     var ebin = {
       title: 'Edit docket',
       galleryName: docket.galleryName,
-      address: docket.address     
-
+      address: docket.address,     
+      id: docket._id
 
     };
 
@@ -117,17 +117,24 @@ router.get('/:id',function(req, res, next){
 
 
 
-router.put('/:id',function(req, res, next){
+
+
+
+router.post('/:id',function(req, res){
 
   var name = req.body.galleryName;
   var address = req.body.address;
+    
+
+  if (req.query.method === "delete") {
+
+
 
   Docket.findById(req.params.id, function(err, docket){
 
-    docket.galleryName = name;
-    docket.address = address;
+    docket.remove(function(err){
 
-    docket.save(function(err){
+      console.log("deleted");
 
       res.redirect('/dockets');
     //res.json(docket);
@@ -136,14 +143,27 @@ router.put('/:id',function(req, res, next){
 
   });
 
+  } else {
+
+    Docket.findById(req.params.id, function(err, docket){
+
+      docket.galleryName = name;
+      docket.address = address;
+
+      docket.save(function(err){
+
+        console.log("edited");
+
+        res.redirect('/dockets');
+      //res.json(docket);
+
+      });
+
+    });
+
+  }
 
 });
-
-
-
-
-
-
 
 
 
