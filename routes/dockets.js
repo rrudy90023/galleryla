@@ -144,8 +144,7 @@ router.post('/:id',function(req, res, next){
 
 router.delete('/:id',function(req, res){
 
-  Docket.findById(req.params.id)
-    .exec(function(err, docket){
+  Docket.findById(req.params.id, function(err, docket){
 
     docket.remove(function(err){
 
