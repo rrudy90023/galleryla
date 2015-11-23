@@ -108,7 +108,8 @@ router.get('/:id',function(req, res, next){
       title: 'Edit docket',
       galleryName: docket.galleryName,
       address: docket.address,     
-      id: docket._id
+      id: docket._id,
+      firstName: req.user.firstName
 
     };
 
