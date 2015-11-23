@@ -96,6 +96,11 @@ router.post('/create', function(req, res, next) {
 
 
 router.get('/:id',function(req, res, next){
+  
+  if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
+
 
   Docket.findById(req.params.id, function(err, docket){
 
