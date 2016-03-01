@@ -1,0 +1,69 @@
+<div class="textwidget margin-top-30">
+
+	<p>Edit Gallery {{this.id}}<p>
+
+</div>
+<div class="widget">
+	<form name="create-gallery-form" id="create-gallery-form" method="post">
+
+
+
+		<div class="form-group">
+			<label for="galleryName">Gallery name</label>
+			<input type="text" id="galleryName" name="galleryName" required value="{{this.galleryName}}"/>
+		</div>
+		<div class="form-group">
+			<label for="address">Address</label>
+			<input type="text" id="address" name="address" required value="{{this.address}}"/>
+		</div>
+
+		<div class="form-group">
+			<label for="city">City</label>
+			<input type="text" id="city" name="city" required value="{{this.city}}"/>
+		</div>
+
+		<div class="form-group">
+			<label for="state">State</label>
+			<input type="text" id="state" name="state" required value="{{this.state}}"/>
+		</div>
+
+		<div class="form-group">
+			<label for="zipcode">Zipcode</label>
+			<input type="text" id="zipcode" name="zipcode" required value="{{this.zipcode}}"/>
+		</div>
+
+		<div class="form-group">
+			<label for="map">Map</label>
+			<input type="text" id="map" name="map" required value="{{this.map}}"/>
+		</div>
+
+		<div class="form-group">
+			<label for="website">Website</label>
+			<input type="text" id="website" name="website" required value="{{this.website}}"/>
+		</div>
+
+
+		<div class="form-group">
+			<label for="hours">Hours</label>
+			<input type="text" id="hours" name="hours" required value="{{this.hours}}"/>
+		</div>
+
+
+		<div class="form-submit">
+			<input type="submit" value="Edit gallery" />
+		</div>
+
+
+
+
+		<span style="color:red">{{error}}</span>
+	</form>
+
+<form name="create-gallery-form" id="create-gallery-form" method="post" action="{{this.id}}?method=delete">
+	<div class="form-submit">
+		<input type="submit" name="delete" value="Delete gallery" />
+	</div>
+</form>
+
+
+</div>

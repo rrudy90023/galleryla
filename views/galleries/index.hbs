@@ -1,0 +1,25 @@
+<div class="textwidget margin-top-30">
+<p>All galleries</p>
+</div>
+<div class="widget">
+<ul>
+	    {{#each gallist}}
+
+			<li>
+				<h3>{{this.galleryName}}</h3>
+				<p>{{this.address}}</p>
+				<p>{{this.city}}</p>
+				<p>{{this.state}}</p>
+				<p>{{this.zipcode}}</p>
+				<p>{{this.map}}</p>
+				<p>{{this.hours}}</p>
+				<p>{{this.website}}</p>
+
+
+			</li>
+
+		{{/each}}
+
+</ul>
+
+</div>

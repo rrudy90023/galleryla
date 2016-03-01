@@ -14,7 +14,7 @@ var MongoStore = connectMongo(expressSession);
 var config = require('./config');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var dockets = require('./routes/dockets');
+var galleries = require('./routes/galleries');
 
 
 var passportConfig = require('./auth/passport-config');
@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(expressSession(
     {
-        secret: 'getting hungry',
+        secret: 'LA',
         saveUninitialized: false,
         resave: false,
         store: new MongoStore({
@@ -53,7 +53,7 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 //app.use(restrict);
-app.use('/dockets', dockets);
+app.use('/galleries', galleries);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

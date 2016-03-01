@@ -28,7 +28,7 @@ router.post('/create', function(req, res, next) {
       return res.render('users/create', vm);
     }
     req.login(req.body, function(err) {
-      res.redirect('/dockets');
+      res.redirect('/galleries');
     });
   });
 });
@@ -43,7 +43,7 @@ router.post('/login',
   }, 
   passport.authenticate('local', {
     failureRedirect: '/', 
-    successRedirect: '/dockets',
+    successRedirect: '/galleries',
     failureFlash: 'Invalid credentials'
   }));
 

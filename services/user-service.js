@@ -1,6 +1,6 @@
 var bcrypt = require('bcrypt');
 var User = require('../models/user').User;
-var Docket = require('../models/docket').Docket;
+var Gallery = require('../models/gallery').Gallery;
 
 
 exports.addUser = function(user, next) {
@@ -12,7 +12,6 @@ exports.addUser = function(user, next) {
     var newUser = new User({
       firstName: user.firstName,
       lastName: user.lastName,
-      roomNumber: user.roomNumber,
       email: user.email.toLowerCase(),
       password: user.password
     });
@@ -28,25 +27,21 @@ exports.addUser = function(user, next) {
 
 
 
-exports.addDocket = function(docket, next) {
-
-    // if (err) {
-    //   return next(err);
-    // }
-
-    var newDocket = new Docket({
-      galleryName: docket.galleryName,
-      address: docket.address,
-
+exports.addGallery = function(gallery, next) {
+    var newGallery = new Gallery({
+      galleryName: gallery.galleryName,
+      address: gallery.address,
+      city: gallery.city,
+      zipcode: gallery.zipcode,
+      state: gallery.state,
+      hours: gallery.hours,
+      map: gallery.map,
+      website: gallery.website
     });
     
-    newDocket.save(function(err) {
-      // if (err) {
-      //   return next(err);
-      // }
+    newGallery.save(function(err) {
       next(null);
     });
-
 };
 
 
