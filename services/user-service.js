@@ -34,9 +34,7 @@ exports.addGallery = function(gallery, next) {
       city: gallery.city,
       zipcode: gallery.zipcode,
       state: gallery.state,
-      hours: gallery.hours,
-      map: gallery.map,
-      website: gallery.website
+      vrid: gallery.vrid
     });
     
     newGallery.save(function(err) {

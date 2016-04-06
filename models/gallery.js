@@ -8,9 +8,7 @@ var gallerySchema = new Schema({
   city: { type: String, required: 'Please enter city'},
   state: { type: String, required: 'Please enter state'},
   zipcode: { type: Number, required: 'Please enter zip code'},
-  hours: { type: String, required: 'Please enter hours'},
-  map: { type: String, required: 'Please enter map'},
-  website: {type: String, required: 'Please enter website'}, 
+  vrid: { type: String, required: 'Please enter VR ID name'},
   created: { type: Date, default: Date.now }
 });
 

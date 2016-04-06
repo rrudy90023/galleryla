@@ -51,9 +51,7 @@ router.get('/', function(req, res, next) {
                   city: gal.city,
                   zipcode: gal.zipcode,
                   state: gal.state,
-                  hours: gal.hours,
-                  map: gal.map,
-                  website: gal.website
+                  vrid: gal.vrid
 
                };
         });
@@ -119,9 +117,7 @@ router.get('/:id',function(req, res, next){
       city: gallery.city,
       zipcode: gallery.zipcode,
       state: gallery.state,
-      hours: gallery.hours,
-      map: gallery.map,
-      website: gallery.website, 
+      vrid: gallery.vrid,
       id: gallery._id,
       firstName: req.user.firstName
 
@@ -147,9 +143,8 @@ router.post('/:id',function(req, res){
   var city = req.body.city;
   var zipcode = req.body.zipcode;
   var state = req.body.state;
-  var hours = req.body.hours;
-  var map = req.body.map;
-  var website = req.body.website;
+  var vrid = req.body.vrid;
+
     
 
   if (req.query.method === "delete") {
@@ -178,9 +173,8 @@ router.post('/:id',function(req, res){
       gallery.city = city;
       gallery.zipcode = zipcode;
       gallery.state = state;
-      gallery.hours = hours;
-      gallery.map = map;
-      gallery.website = website;
+      gallery.vrid = vrid;
+
 
 
       gallery.save(function(err){
