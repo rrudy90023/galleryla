@@ -1,8 +1,9 @@
+<a href="/galleries/create" class="sbtn creategalbtn">Create a Gallery</a>
 <div class="">
 <p>All galleries</p>
 </div>
 <div class="">
-<ul>
+<ul class="allg">
 	    {{#each gallist}}
 
 			<li>
@@ -11,14 +12,14 @@
 				<p>{{this.city}}</p>
 				<p>{{this.state}}</p>
 				<p>{{this.zipcode}}</p>
-				<p>{{this.vrid}}</p>
-
-				<a href="http://rudes.de/vr/index.html?image=examples/pano/{{this.vrid}}_4096.jpg&is_stereo=true&preview=examples/pano/{{this.vrid}}_2048.jpg">VR</a>
-
+				
+				<a href="/galleries/{{this.id}}" class="sbtn">View Details</a>
 			</li>
 
 		{{/each}}
 
 </ul>
+
+
 
 </div>

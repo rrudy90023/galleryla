@@ -51,8 +51,8 @@ router.get('/', function(req, res, next) {
                   city: gal.city,
                   zipcode: gal.zipcode,
                   state: gal.state,
-                  vrid: gal.vrid
-
+                  vrid: gal.vrid,
+                  id: gal._id
                };
         });
       console.log(model);

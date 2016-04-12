@@ -13,12 +13,12 @@
       <input type="checkbox" id="rememberMe" name="rememberMe"  />
     </div>
     <div class="form-submit">
-      <input type="submit" value="Log in" />
+      <input type="submit" class="sbtn" value="Log in" />
       {{#if error}}
       <div style="color:red;">{{error}}</div>
       {{/if}}
       <div class="margin-top-30">
-        or <a href="/users/create">Create an account</a>
+        or <a href="/users/create" class="sbtn">Create an account</a>
       </div>
     </div>
   </form>

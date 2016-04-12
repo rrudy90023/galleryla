@@ -6,8 +6,6 @@
         <title>GalleryLA{{#if title}} - {{title}}{{/if}} API</title>
         <meta name="description" content="" />
         <link rel='stylesheet' href='/stylesheets/style.css' type='text/css' media='all' />
-        <script type='text/javascript' src='/js/jquery.js'></script>
-        <script type='text/javascript' src="/js/main.js"></script>
     </head>
     <body>
         <div id="page" class="container">
@@ -19,9 +17,9 @@
 
 
             {{#if firstName}}
-            <div id="greeting" style="float:right">
+            <div id="greeting">
             	<strong>Hi, {{firstName}}!</strong>
-            	<a href="/users/logout">Log Out</a>
+            	<a href="/users/logout" class="sbtn">Log Out</a>
             </div>
             {{/if}}
 	        

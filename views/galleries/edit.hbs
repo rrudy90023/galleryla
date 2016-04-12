@@ -3,7 +3,7 @@
 	<p>Edit Gallery {{this.vrid}}<p>
 
 </div>
-<div class="">
+<div class="editgal">
 	<form name="create-gallery-form" id="create-gallery-form" method="post">
 
 
@@ -38,21 +38,24 @@
 		</div>
 
 
+		<a href="http://rudes.de/vr/index.html?image=examples/pano/{{this.vrid}}_4096.jpg&is_stereo=true&preview=examples/pano/{{this.vrid}}_2048.jpg" class="sbtn">view VR</a>
+
+
 		<div class="form-submit">
-			<input type="submit" value="Edit gallery" />
+			<input type="submit" class="sbtn" value="Save Changes" />
 		</div>
 
 
-
+		
 
 		<span style="color:red">{{error}}</span>
 	</form>
 
-<form name="create-gallery-form" id="create-gallery-form" method="post" action="{{this.id}}?method=delete">
-	<div class="form-submit">
-		<input type="submit" name="delete" value="Delete gallery" />
-	</div>
-</form>
+		<form name="create-gallery-form" id="create-gallery-form" method="post" action="{{this.id}}?method=delete">
+			<div class="form-submit">
+				<input type="submit" class="sbtn" name="delete" value="Delete gallery" />
+			</div>
+		</form>
 
 
 </div>
