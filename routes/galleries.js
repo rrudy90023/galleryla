@@ -67,9 +67,9 @@ router.get('/', function(req, res, next) {
 router.get('/create', function(req, res, next) {
 
 
-  // if (!req.isAuthenticated()) {
-  //   return res.redirect('/');
-  // }
+  if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
   var vm = {
     title: 'Create a Gallery',
     firstName: req.user.firstName
