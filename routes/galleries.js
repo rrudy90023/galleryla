@@ -33,9 +33,9 @@ router.get('/api', function(req, res, next) {
 
 router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
-    // if (!req.isAuthenticated()) {
-    //   return res.redirect('/');
-    // }
+    if (!req.isAuthenticated()) {
+      return res.redirect('/');
+    }
 
     Gallery.find({}, function(err, galleries){
       // var docketMap = {};
@@ -103,9 +103,9 @@ router.post('/create', function(req, res, next) {
 
 router.get('/:id',function(req, res, next){
   
-  // if (!req.isAuthenticated()) {
-  //   return res.redirect('/');
-  // }
+  if (!req.isAuthenticated()) {
+    return res.redirect('/');
+  }
 
 
   Gallery.findById(req.params.id, function(err, gallery){
