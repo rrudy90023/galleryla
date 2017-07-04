@@ -1,140 +1,85 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 body {
-font-family: 'Lato', sans-serif;
-text-transform: uppercase;
-font-size: 25px;
-font-weight: 600;
+font-family: 'Roboto', sans-serif;
+/*text-transform: uppercase;*/
+
+font-weight: 400;
 top: 0;
 left: 0;
 width: 100%;
 height: auto;
-text-align: center;
+/*text-align: center;*/
 margin: 0;
 
 }
 
 a:link {
-text-decoration: none;
-color: white;
+font-size: 20px;
+font-weight: 400;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: red;
 }
 
 a:visited {
-text-decoration: none;
-color: white;
+font-size: 20px;
+font-weight: 400;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: red;
 }
 
 a:hover {
-text-decoration: none;
-color: white;
+font-size: 20px;
+font-weight: 400;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: black;
 }
 
 a:active {
-text-decoration: none;
-color: white;
-}
-
-button, input, select, textarea, a {
-font-family : inherit;
-font-size   : 100%;
-width : 100%;
-margin: 0;
-
--webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
--moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-box-sizing: border-box;
-}
-
-.allg {
-text-align: left;
+font-size: 20px;
+font-weight: 400;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: red;
 }
 
 
-.allg p, .allg h3 {
-padding: 0;
-margin: 0;
-}
 
-.allg li {
-width: 90%;
+.form-signin {
+max-width: 330px;
+padding: 15px;
 margin: 0 auto;
 }
 
-ul {
-list-style-type: none;
-padding: 0;
+.form-signin label {
+font-size: 20px
 }
 
-
-.sbtn {
-background-color: #000;
-border: none;
-color: white;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 25px;
-cursor: pointer;
-font-weight: 600;
-border-radius: 0px;
--webkit-border-radius:0px;
--moz-border-radius:0px;
-text-transform: uppercase;
--webkit-appearance: none;
--moz-appearance:    none;
-appearance:         none;
+.addy {
+margin-top: 30px;
+line-height: 0.7; 
 }
 
-
-.container {
-width: 100%;
-position: relative;
-height: auto;
-margin: auto;
-
+.head {
+text-align: right;
+}
+.head h1{
 }
 
-.logindiv, .createuser, .creategal, .editgal {
-display: inline-block;
-position: relative;
-height: auto;
-width: 90%;
+label {
+font-size: 20px;
 }
 
-
-.gallist {
-display: inline-block;
+.spacer {
+margin-bottom: 20px
 }
 
-#page-content {
-
-position: relative;
-width: 100%;
-height: 570px;
-display: inline-block;
-margin: 0 auto;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
+.rtSpacer {
+margin-right: 10px;
 }
-
-.form-group, .form-submit {
-text-align: left;
-}
-
-.form-group {
-width: 100%;
-display: inline-block;
-}
-
-.form-group input {
-width: 100%;
-display: inline-block;
-}
-
-#greeting, .creategalbtn {
-	width: 90%;
-	margin: 0 auto;
+.form-submit input{
+color: red;
 }

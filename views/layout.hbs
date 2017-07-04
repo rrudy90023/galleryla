@@ -2,37 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>GalleryLA{{#if title}} - {{title}}{{/if}} API</title>
         <meta name="description" content="" />
+        <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='/stylesheets/style.css' type='text/css' media='all' />
+
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
     </head>
     <body>
         <div id="page" class="container">
 
-
-
-
-
-
-
             {{#if firstName}}
-            <div id="greeting">
-            	<strong>Hi, {{firstName}}!</strong>
-            	<a href="/users/logout" class="sbtn">Log Out</a>
+            <div id="greeting" class="row head">
+            	<h1 class="rtSpacer">Hi, {{firstName}}!</h1>
+            	<a href="/users/logout" class="btn btn-link">Log Out</a>
             </div>
             {{/if}}
-	        
-	           
 							
-			<div id="page-content">
+
 				<!-- BEGIN page-specific content -->
 				{{{body}}}		
 				<!-- END page-specific content -->
-			</div>									
+								
 
-
-            
 	        <footer id="colophon" role="contentinfo">
 
 	        </footer>

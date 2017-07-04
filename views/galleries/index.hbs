@@ -1,25 +1,13 @@
-<a href="/galleries/create" class="sbtn creategalbtn">Create a Gallery</a>
-<div class="">
-<p>All galleries</p>
-</div>
-<div class="">
-<ul class="allg">
+	<a href="/galleries/create" class="btn btn-default btn-lg btn">Create a Gallery</a>
+
 	    {{#each gallist}}
 
-			<li>
+			<div class="addy">
 				<h3>{{this.galleryName}}</h3>
 				<p>{{this.address}}</p>
-				<p>{{this.city}}</p>
-				<p>{{this.state}}</p>
-				<p>{{this.zipcode}}</p>
+				<p>{{this.city}}, {{this.state}} {{this.zipcode}}</p>
 				
-				<a href="/galleries/{{this.id}}" class="sbtn">View Details</a>
-			</li>
+				<a href="/galleries/{{this.id}}" class="btn btn-default btn-lg btn">View Details</a>
+			</div>
 
 		{{/each}}
-
-</ul>
-
-
-
-</div>
