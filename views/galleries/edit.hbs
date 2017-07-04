@@ -1,11 +1,7 @@
 
 	<h2>Edit {{this.vrid}}<h2>
 
-
-	<form name="create-gallery-form" id="create-gallery-form" method="post">
-
-
-
+	<form class="col-xs-12 col-md-8" name="create-gallery-form" id="create-gallery-form" method="post">
 		<div class="form-group">
 			<label for="galleryName">Gallery name</label>
 			<input type="text" id="galleryName" name="galleryName" class="form-control" required value="{{this.galleryName}}"/>
@@ -42,14 +38,10 @@
 		<div class="form-submit">
 			<input type="submit" class="btn btn-lg btn-default btn-block spacer" value="Save Changes" />
 		</div>
-
-
-		
-
 		<span style="color:red">{{error}}</span>
 	</form>
 
-	<form name="create-gallery-form" id="create-gallery-form" method="post" action="{{this.id}}?method=delete">
+	<form class="col-xs-12 col-md-8"  name="create-gallery-form" id="create-gallery-form" method="post" action="{{this.id}}?method=delete">
 		<div class="form-submit">
 			<input type="submit" class="btn btn-lg btn-default btn-block" name="delete" value="Delete gallery" />
 		</div>
