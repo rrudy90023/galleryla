@@ -83,3 +83,9 @@ margin-right: 10px;
 .form-submit input{
 color: red;
 }
+
+.alert-style {
+color:red;
+font-size: 20px;
+font-weight: 400;
+}

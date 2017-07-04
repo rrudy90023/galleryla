@@ -1,4 +1,11 @@
-	<a href="/galleries/create" class="btn btn-default btn-lg btn">Create a Gallery</a>
+<div class="alert alert-danger alert-dismissible fade in alert-style" role="alert"> 
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<span aria-hidden="true">×</span></button> 
+	<h4>For optimal viewing experience, please view in a mobile browser</h4>
+</div>
+
+
+	<a href="/galleries/create" class="btn btn-default btn-lg btn">Create a VR Gallery</a>
 
     {{#each gallist}}
 
@@ -6,8 +13,10 @@
 			<h3>{{this.galleryName}}</h3>
 			<p>{{this.address}}</p>
 			<p>{{this.city}}, {{this.state}} {{this.zipcode}}</p>
-			
-			<a href="/galleries/{{this.id}}" class="btn btn-default btn-lg btn">View Details</a>
+
+			<a href="http://rudes.de/vr/index.html?image=examples/pano/{{this.vrid}}_4096.jpg&is_stereo=true&preview=examples/pano/{{this.vrid}}_2048.jpg" class="btn btn-default btn-lg btn">View VR</a>
+
+{{!-- 			<a href="/galleries/{{this.id}}" class="btn btn-default btn-lg btn">View Details</a> --}}
 		</div>
 
 	{{/each}}
