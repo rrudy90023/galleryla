@@ -16,6 +16,7 @@ margin: 0;
 
 .linkcolor {
 color: black!important;
+background: white!important;
 }
 
 a:link {
@@ -25,6 +26,7 @@ font-weight: 400;
 box-shadow: none;
 color: white;
 border-radius: 0px;
+background: #ed1c24;
 }
 
 a:visited {
@@ -34,6 +36,7 @@ font-weight: 400;
 box-shadow: none;
 color: white;
 border-radius: 0px;
+background: #ed1c24;
 }
 
 a:hover {
@@ -43,6 +46,7 @@ font-weight: 400;
 box-shadow: none;
 color: white;
 border-radius: 0px;
+background-c: #ed1c24;
 }
 
 a:active {
@@ -52,6 +56,7 @@ font-weight: 400;
 box-shadow: none;
 color: white;
 border-radius: 0px;
+background: #ed1c24;
 }
 
 
@@ -84,6 +89,7 @@ font-size: 20px;
 .spacer {
 margin-bottom: 20px;
 border-radius: 0px!important;
+background: #ed1c24!important;
 }
 
 .rtSpacer {
