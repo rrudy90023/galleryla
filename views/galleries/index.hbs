@@ -5,7 +5,7 @@
 </div>
 
 
-	<a href="/galleries/create" class="btn btn-default btn-lg btn">Create a VR Gallery</a>
+	<a href="/galleries/create" class="btn btn-danger btn-lg btn">Create a VR Gallery</a>
 
     {{#each gallist}}
 
@@ -14,7 +14,7 @@
 			<p>{{this.address}}</p>
 			<p>{{this.city}}, {{this.state}} {{this.zipcode}}</p>
 
-			<a href="http://rudes.de/vr/index.html?image=examples/pano/{{this.vrid}}_4096.jpg&is_stereo=true&preview=examples/pano/{{this.vrid}}_2048.jpg" class="btn btn-default btn-lg btn">View VR</a>
+			<a href="http://rudes.de/vr/index.html?image=examples/pano/{{this.vrid}}_4096.jpg&is_stereo=true&preview=examples/pano/{{this.vrid}}_2048.jpg" class="btn btn-danger btn-lg btn">View VR</a>
 
 {{!-- 			<a href="/galleries/{{this.id}}" class="btn btn-default btn-lg btn">View Details</a> --}}
 		</div>
