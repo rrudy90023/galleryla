@@ -24,6 +24,7 @@ font-weight: 400;
 -webkit-box-shadow: none;
 box-shadow: none;
 color: white;
+border-radius: 0px;
 }
 
 a:visited {
@@ -32,6 +33,7 @@ font-weight: 400;
 -webkit-box-shadow: none;
 box-shadow: none;
 color: white;
+border-radius: 0px;
 }
 
 a:hover {
@@ -40,6 +42,7 @@ font-weight: 400;
 -webkit-box-shadow: none;
 box-shadow: none;
 color: white;
+border-radius: 0px;
 }
 
 a:active {
@@ -48,6 +51,7 @@ font-weight: 400;
 -webkit-box-shadow: none;
 box-shadow: none;
 color: white;
+border-radius: 0px;
 }
 
 
@@ -78,7 +82,8 @@ font-size: 20px;
 }
 
 .spacer {
-margin-bottom: 20px
+margin-bottom: 20px;
+border-radius: 0px!important;
 }
 
 .rtSpacer {
@@ -89,7 +94,7 @@ color: white;
 }
 
 .alert-style {
-
+border-radius: 0px!important;
 font-size: 20px;
 font-weight: 400;
 }
